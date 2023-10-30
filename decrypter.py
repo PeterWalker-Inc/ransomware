@@ -11,7 +11,7 @@ key = load_key()
 algo = Fernet(key)
 
 
-path = os.path.join("C:\\test")
+path = os.path.join("D:\\test-directory")
 os.chdir(path)
 
 for root, dirs, files in os.walk('.'):
@@ -24,7 +24,7 @@ for root, dirs, files in os.walk('.'):
         else:
             continue
  
-        ransom_extension_removed_filepath = filepath.replace(".ahem", "")
+        ransom_extension_removed_filepath = filepath.replace(".lock", "")
         os.rename(filepath, ransom_extension_removed_filepath)
 
         print(ransom_extension_removed_filepath)
